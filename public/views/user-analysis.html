@@ -1,0 +1,80 @@
+<h1 class="page-header">User Analysis</h1>
+<div class="row">
+	<div class="col-sm-12">
+        <table class="table table-responsive table-bordered">
+            <tr>
+                <th class="info"></th>
+                <th ng-repeat='data in userResponse.data' class="info">
+                    {{data.timeSpan}} days
+                </th>
+            </tr>
+            <tr>
+                <td>No of Users</td>
+                <td ng-repeat='data in userResponse.data'>
+                    {{data.noOfUsers}}
+                </td>
+            </tr>
+            <tr>
+                <td>Avg time spent per user</td>
+                <td ng-repeat='data in userResponse.data'>
+                    {{data.avgTime}} min(s)
+                </td>
+            </tr>
+            <tr>
+                <td>Regular / Repeat customers</td>
+                <td ng-repeat='data in userResponse.data'>
+                    {{data.repeatUsers}}
+                </td>
+            </tr>
+        </table>
+	</div>
+</div>
+
+
+<form class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Usage peak time</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="text" ng-model="userResponse.peakTime">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Most Visited Masthead</label>
+        <div class="col-sm-10">
+            <input class="form-control disabled" type="text" ng-model="userResponse.mastheadName">
+        </div>
+    </div>
+
+    <div class="form-group hide">
+        <label class="col-sm-2 control-label">Users visiting another coffee shop on the same day *</label>
+        <div class="col-sm-10">
+            <input class="form-control disabled" type="text" value="2">
+        </div>
+    </div>
+
+</form>
+
+<div class="row">
+	<div class="col-xs-8"><h4>Total user visits ({{selectedChartType}})</h4></div>
+	<div class="col-xs-4 text-right">
+		<select class="form-control" ng-model="selectedChartType" ng-change="updateChart()">
+		  <option value="days">Days</option>
+		  <option value="weekly">Weekly</option>
+		  <option value="monthly">Monthly</option>
+		  <option value="yearly">Yearly</option>
+		</select>
+	</div>
+</div>
+
+<div class="row">
+	<div id="chart-container" class="col-sm-12">
+		<ul id="chart-bar-container" style="height: 250px;">
+			<li ng-repeat="data in userResponse.chartData track by $index"
+                style="height:{{getBarHeight(data.noOfUsers)}}%; left:{{$index / userResponse.chartData.length * 100}}%;">
+				{{data.noOfUsers}}
+				<div class="day">{{data.legendX}}</div>
+			</li>
+		</ul>
+		
+	</div>
+</div>

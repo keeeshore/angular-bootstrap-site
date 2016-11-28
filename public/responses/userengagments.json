@@ -1,0 +1,58 @@
+{
+  "peakTime": "7.00 am to 10.00am",
+  "mastheadName": "The Daily Telegraph",
+  "data": [
+		{
+			"timeSpan": "1",
+			"noOfUsers": 5,
+			"repeatUsers": 1,
+			"avgTime": "1.5"
+		},
+		{
+			"timeSpan": "7",
+			"noOfUsers": 15,
+			"repeatUsers": 5,
+			"avgTime": "2"
+		},
+		{
+			"timeSpan": "30",
+			"noOfUsers": 15,
+			"repeatUsers": 2,
+			"avgTime": "5"
+		}
+	],
+	"chartDataDays": [
+		{"legendX": "Monday", "noOfUsers": "3"},
+		{"legendX": "Tuesday", "noOfUsers": "5"},
+		{"legendX": "Wednesday", "noOfUsers": "7"},
+		{"legendX": "Thursday", "noOfUsers": "4"},
+		{"legendX": "Friday", "noOfUsers": "6"},
+		{"legendX": "Saturday", "noOfUsers": "2"},
+		{"legendX": "Sunday", "noOfUsers": "1"}		
+	],
+	"chartDataWeekly": [
+	  {"legendX": "JAN(week-1)", "noOfUsers": "33"},
+	  {"legendX": "JAN(week-2)", "noOfUsers": "52"},
+	  {"legendX": "JAN(week-3)", "noOfUsers": "71"},
+	  {"legendX": "JAN(week-4)", "noOfUsers": "45"}
+	],
+	"chartDataMonthly": [
+	  {"legendX": "JAN", "noOfUsers": "100"},
+	  {"legendX": "FEB", "noOfUsers": "280"},
+	  {"legendX": "MAR", "noOfUsers": "459"},
+	  {"legendX": "APR", "noOfUsers": "160"},
+	  {"legendX": "MAY", "noOfUsers": "100"},
+	  {"legendX": "JUN", "noOfUsers": "370"},
+	  {"legendX": "JUL", "noOfUsers": "290"},
+	  {"legendX": "AUG", "noOfUsers": "180"},
+	  {"legendX": "SEP", "noOfUsers": "90"},
+	  {"legendX": "OCT", "noOfUsers": "159"},
+	  {"legendX": "NOV", "noOfUsers": "263"},
+	  {"legendX": "DEC", "noOfUsers": "123"}
+	],
+	"chartDataYearly": [
+	  {"legendX": "2014", "noOfUsers": "1000"},
+	  {"legendX": "2015", "noOfUsers": "2800"},
+	  {"legendX": "2016", "noOfUsers": "459"}
+	]
+}
